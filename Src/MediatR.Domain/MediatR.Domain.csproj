@@ -4,11 +4,7 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<ProjectGuid>31402703-20DA-4BA0-AE28-E6CEA5D2DFFC</ProjectGuid>
+		<ProjectGuid>673C4127-566E-4636-9852-898E99CA65BD</ProjectGuid>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\MediatR.Domain\MediatR.Domain.csproj" />
-	</ItemGroup>
 
 </Project>
