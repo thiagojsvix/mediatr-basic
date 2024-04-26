@@ -16,6 +16,17 @@ public sealed class Person : Entity
         ValidateDomain(id, firstName, lastName, gender, email, isActive);
     }
 
+    public Person(string firstName, string lastName, string gender, string email, bool isActive) : base()
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Gender = gender;
+        Email = email;
+        IsActive = isActive;
+
+        ValidateDomain(firstName, lastName, gender, email, isActive);
+    }
+
     public string FirstName { get; private set; } = string.Empty;
     public string LastName { get; private set; } = string.Empty;
     public string Gender { get; private set; } = string.Empty;

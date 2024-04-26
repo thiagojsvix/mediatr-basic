@@ -2,6 +2,11 @@
 
 public abstract class Entity
 {
+    protected Entity()
+    {
+        Id = 0;
+    }
+
     protected Entity(long id)
     {
         Id = id;

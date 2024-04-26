@@ -13,5 +13,7 @@ public static class DependencyInjection
         services.AddMediatR(x => x.RegisterServicesFromAssemblies(handlers));
 
         return services;
+
+        //adicionar IoF
     }
 }
