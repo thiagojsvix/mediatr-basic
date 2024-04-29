@@ -1,6 +1,6 @@
-﻿using MediatR.Domain.Entities;
+﻿using DemoMediatR.Domain.Entities;
 
-namespace MediatR.Domain.Abstractions;
+namespace DemoMediatR.Domain.Abstractions;
 
 public interface IPersonDapperRepository
 {

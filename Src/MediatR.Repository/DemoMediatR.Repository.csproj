@@ -16,7 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MediatR.Domain\MediatR.Domain.csproj" />
+	  <ProjectReference Include="..\MediatR.Domain\DemoMediatR.Domain.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

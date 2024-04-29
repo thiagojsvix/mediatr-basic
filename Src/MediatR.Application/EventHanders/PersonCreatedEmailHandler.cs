@@ -1,8 +1,10 @@
-﻿using MediatR.Application.Events;
+﻿using DemoMediatR.Application.Events;
+
+using MediatR;
 
 using Microsoft.Extensions.Logging;
 
-namespace MediatR.Application.EventHanders;
+namespace DemoMediatR.Application.EventHanders;
 
 public class PersonCreatedEmailHandler(ILogger<PersonCreatedEmailHandler> logger) : INotificationHandler<PersonCreatedNotification>
 {

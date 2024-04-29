@@ -1,11 +1,12 @@
-﻿using MediatR.Domain.Entities;
+﻿using DemoMediatR.Domain.Entities;
 
-namespace MediatR.Domain.Abstractions;
+namespace DemoMediatR.Domain.Abstractions;
+
 public interface IPersonRepository
 {
     Task<IEnumerable<Person>> GetAll();
-    Task<Person> GetPersonId(long id);
+    Task<Person?> GetPersonId(long id);
     Task<Person> AddPerson(Person person);
     Person UpdatePerson(Person person);
-    Task DeletePerson(long id);
+    Task<Person?> DeletePerson(long id);
 }

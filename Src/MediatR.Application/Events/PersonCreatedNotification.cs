@@ -1,6 +1,8 @@
-﻿using MediatR.Domain.Entities;
+﻿using DemoMediatR.Domain.Entities;
 
-namespace MediatR.Application.Events;
+using MediatR;
+
+namespace DemoMediatR.Application.Events;
 
 public class PersonCreatedNotification(Person person) : INotification
 {

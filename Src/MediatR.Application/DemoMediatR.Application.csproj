@@ -14,8 +14,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MediatR.Domain\MediatR.Domain.csproj" />
-	  <ProjectReference Include="..\MediatR.Repository\MediatR.Repository.csproj" />
+	  <ProjectReference Include="..\MediatR.Domain\DemoMediatR.Domain.csproj" />
+	  <ProjectReference Include="..\MediatR.Repository\DemoMediatR.Repository.csproj" />
 	</ItemGroup>
 
 </Project>

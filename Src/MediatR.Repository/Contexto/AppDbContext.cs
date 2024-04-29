@@ -1,8 +1,9 @@
-﻿using MediatR.Domain.Entities;
-using MediatR.Repository.Configuration;
+﻿using DemoMediatR.Domain.Entities;
+using DemoMediatR.Repository.Configuration;
+
 using Microsoft.EntityFrameworkCore;
 
-namespace MediatR.Repository.Contexto;
+namespace DemoMediatR.Repository.Contexto;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

@@ -1,4 +1,4 @@
-﻿namespace MediatR.Domain.Validations;
+﻿namespace DemoMediatR.Domain.Validations;
 
 public class DomainValidation : Exception
 {

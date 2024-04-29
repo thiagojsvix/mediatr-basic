@@ -1,7 +1,11 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using DemoMediatR.Application.Behaviors;
+
+using FluentValidation;
+
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MediatR.CrossCutting;
+namespace DemoMediatR.CrossCutting;
 
 public static class DependencyInjection
 {
@@ -9,11 +13,25 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-        var handlers = AppDomain.CurrentDomain.Load("MediatR.Application");
-        services.AddMediatR(x => x.RegisterServicesFromAssemblies(handlers));
+        //services.AddScoped<IUnitOfWork, UnitOfWork>();
+        //services.AddScoped<IPersonRepository, PersonRepository>();
+        //services.AddScoped<IPersonDapperRepository, PersonDapperRepository>();
+
+        const string applicationAssemblyName = "DemoMediatR.Application";
+
+        var assembly = AppDomain.CurrentDomain.Load(applicationAssemblyName);
+
+        AssemblyScanner
+            .FindValidatorsInAssembly(assembly)
+            .ForEach(result => services.AddScoped(result.InterfaceType, result.ValidatorType));
+
+        services.AddMediatR(configuration =>
+        {
+            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
+
+            configuration.RegisterServicesFromAssemblies(assembly);
+        });
 
         return services;
-
-        //adicionar IoF
     }
 }

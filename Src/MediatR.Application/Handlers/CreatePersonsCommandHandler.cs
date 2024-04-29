@@ -1,22 +1,21 @@
-﻿using FluentValidation;
+﻿using DemoMediatR.Application.Commands;
+using DemoMediatR.Application.Events;
+using DemoMediatR.Domain.Entities;
 
-using MediatR.Application.Commands;
-using MediatR.Application.Events;
-using MediatR.Domain.Abstractions;
-using MediatR.Domain.Entities;
+using MediatR;
 
-namespace MediatR.Application.Handlers;
+namespace DemoMediatR.Application.Handlers;
 
-public class CreatePersonsCommandHandler(IMediator mediator, IUnitOfWork unitOfWork, IValidator<CreatePersonCommand> validator) : IRequestHandler<CreatePersonCommand, Person>
+public class CreatePersonsCommandHandler(IMediator mediator) : IRequestHandler<CreatePersonCommand, Person>
 {
     public async Task<Person> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
     {
-        validator.ValidateAndThrow(request);
+        //validator.ValidateAndThrow(request);
 
-        var newMember = new Person(request.FirstName, request.LastName, request.Gender, request.Email, request.IsActive);
+        var newMember = new Person(request.FirstName, request.LastName, request.Gender, request.Email, request.IsActive.Value);
 
-        await unitOfWork.PersonRepository.AddPerson(newMember);
-        await unitOfWork.CommitAsync();
+        //await unitOfWork.PersonRepository.AddPerson(newMember);
+        //await unitOfWork.CommitAsync();
 
         await mediator.Publish(new PersonCreatedNotification(newMember), cancellationToken);
 

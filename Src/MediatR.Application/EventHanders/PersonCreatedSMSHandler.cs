@@ -1,4 +1,5 @@
-﻿using MediatR.Application.Events;
+﻿using DemoMediatR.Application.EventHanders;
+using DemoMediatR.Application.Events;
 
 using Microsoft.Extensions.Logging;
 

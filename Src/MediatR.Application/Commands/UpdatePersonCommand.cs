@@ -1,4 +1,6 @@
-﻿namespace MediatR.Application.Commands;
+﻿using DemoMediatR.Application.Commands;
+
+namespace MediatR.Application.Commands;
 
 public sealed class UpdatePersonCommand : PersonCommandBase
 {

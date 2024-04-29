@@ -1,7 +1,7 @@
-﻿using MediatR.Domain.Abstractions;
-using MediatR.Domain.Validations;
+﻿using DemoMediatR.Domain.Abstractions;
+using DemoMediatR.Domain.Validations;
 
-namespace MediatR.Domain.Entities;
+namespace DemoMediatR.Domain.Entities;
 
 public sealed class Person : Entity
 {

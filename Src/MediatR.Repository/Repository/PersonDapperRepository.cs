@@ -2,10 +2,10 @@
 
 using Dapper;
 
-using MediatR.Domain.Abstractions;
-using MediatR.Domain.Entities;
+using DemoMediatR.Domain.Abstractions;
+using DemoMediatR.Domain.Entities;
 
-namespace MediatR.Repository.Repository;
+namespace DemoMediatR.Repository.Repository;
 
 public class PersonDapperRepository(IDbConnection dbConnection) : IPersonDapperRepository
 {

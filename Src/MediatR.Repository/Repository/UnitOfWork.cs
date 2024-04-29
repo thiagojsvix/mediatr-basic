@@ -1,5 +1,6 @@
-﻿using MediatR.Domain.Abstractions;
-using MediatR.Repository.Contexto;
+﻿using DemoMediatR.Domain.Abstractions;
+using DemoMediatR.Repository.Contexto;
+using DemoMediatR.Repository.Repository;
 
 namespace MediatR.Repository.Repository;
 

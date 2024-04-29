@@ -7,13 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MediatR.Application\MediatR.Application.csproj" />
-    <ProjectReference Include="..\MediatR.Domain\MediatR.Domain.csproj" />
-    <ProjectReference Include="..\MediatR.Repository\MediatR.Repository.csproj" />
+    <ProjectReference Include="..\MediatR.Application\DemoMediatR.Application.csproj" />
+    <ProjectReference Include="..\MediatR.Domain\DemoMediatR.Domain.csproj" />
+    <ProjectReference Include="..\MediatR.Repository\DemoMediatR.Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,10 @@
-﻿namespace MediatR.Application.Commands;
+﻿using DemoMediatR.Domain.Entities;
 
-public sealed class DeletePersonCommand : IRequest
+using MediatR;
+
+namespace DemoMediatR.Application.Commands;
+
+public sealed class DeletePersonCommand : IRequest<Person?>
 {
     public long Id { get; set; }
 }

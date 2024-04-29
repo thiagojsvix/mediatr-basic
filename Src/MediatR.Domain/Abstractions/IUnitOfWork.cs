@@ -1,4 +1,4 @@
-﻿namespace MediatR.Domain.Abstractions;
+﻿namespace DemoMediatR.Domain.Abstractions;
 
 public interface IUnitOfWork
 {

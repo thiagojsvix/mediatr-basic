@@ -1,4 +1,4 @@
-﻿using MediatR.Domain.Entities;
+﻿using DemoMediatR.Domain.Entities;
 
 namespace MediatR.Application.Queries;
 

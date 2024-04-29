@@ -1,6 +1,6 @@
-﻿using FluentValidation;
+﻿using DemoMediatR.Application.Commands;
 
-using MediatR.Application.Commands;
+using FluentValidation;
 
 namespace MediatR.Application.Validations;
 

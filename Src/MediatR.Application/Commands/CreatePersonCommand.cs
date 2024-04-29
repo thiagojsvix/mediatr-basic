@@ -1,3 +1,3 @@
-﻿namespace MediatR.Application.Commands;
+﻿namespace DemoMediatR.Application.Commands;
 
-public sealed class CreatePersonCommand : PersonCommandBase { }
+public class CreatePersonCommand : PersonCommandBase { }

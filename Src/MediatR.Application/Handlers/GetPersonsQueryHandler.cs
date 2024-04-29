@@ -1,13 +1,15 @@
-﻿using MediatR.Application.Queries;
-using MediatR.Domain.Abstractions;
-using MediatR.Domain.Entities;
+﻿using DemoMediatR.Domain.Entities;
 
-namespace MediatR.Application.Handlers;
-public class GetPersonsQueryHandler(IPersonDapperRepository repository) : IRequestHandler<GetPersonsQuery, IEnumerable<Person>>
+using MediatR;
+using MediatR.Application.Queries;
+
+namespace DemoMediatR.Application.Handlers;
+public class GetPersonsQueryHandler() : IRequestHandler<GetPersonsQuery, IEnumerable<Person>>
 {
     public async Task<IEnumerable<Person>> Handle(GetPersonsQuery request, CancellationToken cancellationToken)
     {
-        var persons = await repository.GetPersons();
-        return persons;
+        var persons = Enumerable.Empty<Person>();
+        //var persons = await repository.GetPersons();
+        return await Task.FromResult(persons);
     }
 }

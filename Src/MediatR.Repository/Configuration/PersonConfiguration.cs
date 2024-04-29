@@ -1,8 +1,9 @@
-﻿using MediatR.Domain.Entities;
+﻿using DemoMediatR.Domain.Entities;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MediatR.Repository.Configuration;
+namespace DemoMediatR.Repository.Configuration;
 
 public class PersonConfiguration : IEntityTypeConfiguration<Person>
 {
