@@ -5,11 +5,11 @@ using Microsoft.Extensions.Logging;
 
 namespace MediatR.Application.EventHanders;
 
-public class PersonCreatedSMSHandler(ILogger<PersonCreatedEmailHandler> logger) : INotificationHandler<PersonCreatedNotification>
+public class PersonCreatedSMSEventHandler(ILogger<PersonCreatedEmailEventHandler> logger) : INotificationHandler<PersonCreatedNotificationEvent>
 {
-    public Task Handle(PersonCreatedNotification notification, CancellationToken cancellationToken)
+    public Task Handle(PersonCreatedNotificationEvent notification, CancellationToken cancellationToken)
     {
-        //send a confirmation SMS
+        //envia confirmação SMS
         logger.LogInformation($"Confirmation sms sent for : {notification.Person.FirstName}");
 
         //logica para enviar SMS

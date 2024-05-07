@@ -4,7 +4,7 @@ using MediatR;
 
 namespace DemoMediatR.Application.Events;
 
-public class PersonCreatedNotification(Person person) : INotification
+public class PersonCreatedNotificationEvent(Person person) : INotification
 {
     public Person Person { get; } = person;
 }
